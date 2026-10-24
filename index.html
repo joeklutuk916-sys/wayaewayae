@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3E2723" />
+  <title>Ngopi   ☕ — Undangan Digital</title>
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;900&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+
+  <!-- STYLE CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- LOADING SCREEN -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="coffee-cup">
+        <div class="steam steam-1"></div>
+        <div class="steam steam-2"></div>
+        <div class="steam steam-3"></div>
+        <div class="cup-handle"></div>
+        <div class="cup-body">
+          <div class="coffee-liquid"></div>
+        </div>
+      </div>
+      <p class="loader-text">Menyeduh undangan…</p>
+      <div class="progress-track">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCROLL PROGRESS BAR -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="grain"></div>
+    <div class="vignette"></div>
+    <div class="beans" id="beans"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">✦   ✦</p>
+      <h1 class="hero-title" id="heroTitle" data-text="   ☕"></h1>
+      <p class="hero-sub">Sebuah undangan hangat untukmu</p>
+
+      <div class="guest-box">
+        <p class="guest-label">Kepada</p>
+        <p class="guest-name" id="guestName">Sahabat Ngopi</p>
+      </div>
+
+      <button class="btn btn-open ripple-btn" id="openBtn">
+        <i class="fa-solid fa-envelope-open"></i>
+        <span>Buka Undangan</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- DETAIL ACARA -->
+  <section class="section details" id="details">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Detail Acara</h2>
+      <p class="section-sub" data-aos="fade-up" data-aos-delay="100">
+        Catat waktunya, jangan sampai kelewatan ya ☕
+      </p>
+
+      <div class="detail-grid">
+        <!-- Tanggal -->
+        <div class="detail-card tilt" data-aos="fade-up" data-aos-delay="0">
+          <div class="detail-icon"><i class="fa-regular fa-calendar"></i></div>
+          <h3>Tanggal</h3>
+          <p>Sabtu, 24 Oktober 2026</p>
+        </div>
+        <!-- Waktu -->
+        <div class="detail-card tilt" data-aos="fade-up" data-aos-delay="120">
+          <div class="detail-icon"><i class="fa-regular fa-clock"></i></div>
+          <h3>Waktu</h3>
+          <p>19.00 WIB – Selesai</p>
+        </div>
+        <!-- Lokasi -->
+        <div class="detail-card tilt" data-aos="fade-up" data-aos-delay="240">
+          <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+          <h3>Lokasi</h3>
+          <p> JL <br />Gang buntu No. 69</p>
+          <!-- TOMBOL MAPS YANG DIMASUKKAN -->
+          <a href="https://maps.app.goo.gl/nAxUWtywNH2K79Mu9" target="_blank" rel="noopener" class="btn-map">
+            <i class="fa-solid fa-map-location-dot"></i> Buka Maps
+          </a>
+        </div>
+      </div>
+
+      <!-- Countdown -->
+      <div class="countdown" data-aos="zoom-in" data-aos-delay="200">
+        <div class="count-box"><span class="count-num" id="cdDays">00</span><span class="count-label">Hari</span></div>
+        <div class="count-box"><span class="count-num" id="cdHours">00</span><span class="count-label">Jam</span></div>
+        <div class="count-box"><span class="count-num" id="cdMins">00</span><span class="count-label">Menit</span></div>
+        <div class="count-box"><span class="count-num" id="cdSecs">00</span><span class="count-label">Detik</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MUSIC BUTTON -->
+  <button class="music-btn" id="musicBtn" aria-label="Toggle musik">
+    <i class="fa-solid fa-music" id="musicIcon"></i>
+  </button>
+
+  <!-- AUDIO (BGM) -->
+  <audio id="bgm" loop preload="auto">
+    <source src="kopi.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- LIBRARIES -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+
+  <!-- SCRIPT JS -->
+  <script src="script.js"></script>
+</body>
+</html>
